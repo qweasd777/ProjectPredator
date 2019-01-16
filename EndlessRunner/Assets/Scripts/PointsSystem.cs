@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PointsSystem : MonoBehaviour       // aka GameManager
 {
@@ -13,7 +13,7 @@ public class PointsSystem : MonoBehaviour       // aka GameManager
         {
             if (_instance == null)
             {
-                GameObject.FindGameObjectWithTag("Player").AddComponent<PointsSystem>();
+                GameObject.FindGameObjectWithTag("UI_MANAGER").AddComponent<PointsSystem>();
                 DontDestroyOnLoad(_instance);
             }
             return _instance;
@@ -33,9 +33,7 @@ public class PointsSystem : MonoBehaviour       // aka GameManager
         Destroy(this);
     }
     #endregion
-
-    public MenuManager menuManager;
-
+    
     public int maxLevel = 10;
     public int pointsToNextLevel = 10;
     public float speedIncrementPerLevel = 1f;
@@ -43,17 +41,19 @@ public class PointsSystem : MonoBehaviour       // aka GameManager
 
     private int level = 1;
     private float points = 0.0f;
+    private float pointsHighScore = 0.0f;
 
+    private MenuManager menuManager;
     private PlayerController playerController;
 
     void Start()
     {
+        menuManager = GameObject.FindGameObjectWithTag("UI_MANAGER").GetComponent<MenuManager>();
         playerController = GetComponent<PlayerController>();
 
-        if (menuManager == null)
-            Debug.LogWarning("PlayerController script warning... MenuManager is null!");
+        pointsHighScore = PlayerPrefs.GetFloat("Highscore");
     }
-    
+
     void Update()
     {
         if(playerController.isDead)

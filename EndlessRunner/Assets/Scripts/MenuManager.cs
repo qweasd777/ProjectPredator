@@ -8,21 +8,37 @@ public class MenuManager : MonoBehaviour    // Menus and UI manager
 {
     public GameObject gameOverScreen;
 
+    [Header("MainMenu UI")]
+    public Text highScoreText;
+
+    [Header("Game UI")]
     public Text pointsUIText;               // points shown on in-game UI
     public Text finalPointsText;            // points shown on gameOverScreen
 
+    private float pointsHighScore = 0.0f;   
+
     void Start()
     {
+        pointsHighScore = PlayerPrefs.GetFloat("Highscore");
+
         if(SceneManager.GetActiveScene().name == "menu")
+        {
+            // # ATTACHED SCRIPT CHECKS #
+            if(highScoreText == null)
+                Debug.LogWarning("MenuManager script warning... highScoreText is null!");
+            else
+                highScoreText.text = "Highscore: " + pointsHighScore;
+
             return;
+        }
+
+        // # ATTACHED SCRIPT CHECKS #
+        if(pointsUIText == null)
+            Debug.LogWarning("MenuManager script warning... pointsUIText is null!");
+        if(finalPointsText == null)
+            Debug.LogWarning("MenuManager script warning... finalPointsText is null!");
 
         gameOverScreen.SetActive(false);
-
-        if (pointsUIText == null)
-            Debug.LogWarning("GameOverMenu script warning... pointsUIText is null!");
-
-        if (finalPointsText == null)
-            Debug.LogWarning("GameOverMenu script warning... finalScoreText is null!");
     }
 
     public void UpdatePointsUI(float points)
@@ -32,9 +48,12 @@ public class MenuManager : MonoBehaviour    // Menus and UI manager
 
     public void ToggleMenuActive(float points)
     {
-        finalPointsText.text = ((int)points).ToString();
-
         gameOverScreen.SetActive(true);
+
+        if(points > pointsHighScore)
+            PlayerPrefs.SetFloat("Highscore", points);
+
+        finalPointsText.text = ((int)points).ToString();
     }
 
     public void btnRestart()

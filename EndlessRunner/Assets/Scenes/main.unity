@@ -345,7 +345,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7af4a0348a3ec6499cd819d829e623a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuManager: {fileID: 1757902101}
   maxLevel: 10
   pointsToNextLevel: 10
   speedIncrementPerLevel: 2
@@ -1807,7 +1806,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PointsSystem.points
+  m_Text: (PointsSystem.points)
 --- !u!222 &450205930
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2588,7 +2587,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PointsSystem.points
+  m_Text: (PointsSystem.points)
 --- !u!222 &1395939374
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2618,7 +2617,7 @@ GameObject:
   - component: {fileID: 1757902101}
   m_Layer: 5
   m_Name: _UI MANAGER
-  m_TagString: Untagged
+  m_TagString: UI_MANAGER
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2717,6 +2716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverScreen: {fileID: 2132965304}
+  highScoreText: {fileID: 0}
   pointsUIText: {fileID: 1395939373}
   finalPointsText: {fileID: 450205929}
 --- !u!4 &1844853022 stripped
