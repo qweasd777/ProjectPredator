@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class TileManager : MonoBehaviour
@@ -11,7 +10,8 @@ public class TileManager : MonoBehaviour
     public float tileLength = 20f;                          // tiles length in units
     public int maxTilesOnScreen = 7;                        // to prevent probs make sure objectpooler tiles is twice more than this value
 
-    private bool firstTileHasSpawned = false;
+    private int startTilesSpawned = 0;
+    private int startTilesSpawned_MAX = 3;                  // to spawn first few empty tiles
     private int lastPrefabIndex = 0;                        // TODO: better logic patterns (need to do sth to track last tile index spawned, etc)
     private Transform playerTransform;
     private ObjectPooler objectPooler;
@@ -75,9 +75,9 @@ public class TileManager : MonoBehaviour
 
     int RandomPrefabIndex()
     {
-        if(!firstTileHasSpawned)
+        if(startTilesSpawned < startTilesSpawned_MAX)
         {
-            firstTileHasSpawned = true;
+            startTilesSpawned++;
             return 0;
         }
 

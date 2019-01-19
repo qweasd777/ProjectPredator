@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent (typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
@@ -8,7 +6,8 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed_world = 7f;          // auto endless world movespeed
     public float moveSpeed_player = 7f;
     public float gravity = 10f;                 // simple gravity
-    
+
+    public bool debug_godMode = false;
     public bool isDead { get; private set; }
 
     private CharacterController pController;
@@ -40,10 +39,27 @@ public class PlayerController : MonoBehaviour
 
 
         // Player Input Movement
+
+//#if UNITY_EDITOR || UNITY_STANDALONE_WIN
+
+        // KEYBOARD CONTROL
         moveVector.x = Input.GetAxisRaw("Horizontal") * moveSpeed_player;
 
+        // MOUSE TOUCH CONTROL  
+        if(Input.GetMouseButton(0))
+        {
+            if(Input.mousePosition.x > Screen.width * 0.5f)     // RIGHT TOUCH MOVEMENT
+                moveVector.x = moveSpeed_player;
+            else                                                // LEFT TOUCH MOVEMENT
+                moveVector.x = -moveSpeed_player;              
+        }
+
+//#endif
+//#if UNITY_ANDROID || UNITY_IOS
+//#endif
+
         // Player Gravity  
-        if(pController.isGrounded)
+        if (pController.isGrounded)
             moveVector.y = -0.1f;          
         else
             moveVector.y -= gravity;       
@@ -65,16 +81,24 @@ public class PlayerController : MonoBehaviour
 
     void GameOver()
     {
+        if(debug_godMode)
+            return;
+
         isDead = true;
         pointsSystem.OnPlayerDeath();
     }
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        // TODO: fix collider such that only if player hits obstacle face on then gameover is run
+        // TODO: improve collider such that only if player hits obstacle face on then gameover is run
         //  - currently player can still die if he hits obstacle sideways (should it be alright?)
+        //  - might want to improve on logic to make it more sense and reasonable
 
         if(hit.collider.tag == "Obstacle" && hit.point.z > transform.position.z + pController.radius)
             GameOver();
     }
 }
+
+// TODO: 
+// 1)PLATFORM DEPENDENT CONTROLS
+//   - current one is a simple 'hack'

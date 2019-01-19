@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1401862255481149809}
   - component: {fileID: 8199134238849087014}
   - component: {fileID: 919198133599753709}
-  - component: {fileID: 3419052607024766837}
   m_Layer: 0
   m_Name: Tree (1)
   m_TagString: Untagged
@@ -79,19 +78,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &3419052607024766837
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 213444442393456367}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &875183664283073434
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,7 +89,6 @@ GameObject:
   - component: {fileID: 1709082052249868445}
   - component: {fileID: 7957083252227298995}
   - component: {fileID: 1234021439644836095}
-  - component: {fileID: 1494600045406203064}
   m_Layer: 0
   m_Name: Leaf
   m_TagString: Untagged
@@ -170,19 +155,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &1494600045406203064
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 875183664283073434}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1139089079046859287
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,6 +194,8 @@ Transform:
   - {fileID: 1721222943568108492}
   - {fileID: 2791511153573800639}
   - {fileID: 1592476256849853486}
+  - {fileID: 5997287745208087645}
+  - {fileID: 7138120862919636358}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -236,7 +210,6 @@ GameObject:
   - component: {fileID: 1521894423371138287}
   - component: {fileID: 5077383912741779813}
   - component: {fileID: 1795798726148833955}
-  - component: {fileID: 4458157070753108595}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -304,19 +277,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &4458157070753108595
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1855115222817939001}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2173107266043946028
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,7 +288,6 @@ GameObject:
   - component: {fileID: 1878002761272392096}
   - component: {fileID: 7912435337018685525}
   - component: {fileID: 8735102856499871162}
-  - component: {fileID: 8037574883152774129}
   m_Layer: 0
   m_Name: Leaf
   m_TagString: Untagged
@@ -395,19 +354,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &8037574883152774129
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2173107266043946028}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2491126045819941535
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,7 +365,6 @@ GameObject:
   - component: {fileID: 2455883667065295453}
   - component: {fileID: 4733582619056112684}
   - component: {fileID: 8195313301285417174}
-  - component: {fileID: 3124644599258671638}
   m_Layer: 0
   m_Name: Leaf
   m_TagString: Untagged
@@ -486,19 +431,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &3124644599258671638
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2491126045819941535}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2803248194035307493
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,7 +442,6 @@ GameObject:
   - component: {fileID: 1122191366490246282}
   - component: {fileID: 3912114004498007586}
   - component: {fileID: 3421708662560951711}
-  - component: {fileID: 3318325847313580659}
   m_Layer: 0
   m_Name: Leaf
   m_TagString: Untagged
@@ -577,19 +508,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &3318325847313580659
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2803248194035307493}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3414085583797455545
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,7 +519,6 @@ GameObject:
   - component: {fileID: 3545134041338534127}
   - component: {fileID: 738930123446170811}
   - component: {fileID: 7352148351032645750}
-  - component: {fileID: 5489006016321373489}
   m_Layer: 0
   m_Name: Tree (4)
   m_TagString: Untagged
@@ -669,19 +586,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &5489006016321373489
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3414085583797455545}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3421460763997082960
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,7 +597,6 @@ GameObject:
   - component: {fileID: 5971941358293506584}
   - component: {fileID: 2612343308963784875}
   - component: {fileID: 4961044022542464345}
-  - component: {fileID: 6167451205927352536}
   m_Layer: 0
   m_Name: Leaf
   m_TagString: Untagged
@@ -760,19 +663,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &6167451205927352536
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3421460763997082960}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4621340149552151930
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,7 +674,6 @@ GameObject:
   - component: {fileID: 7719888997708105138}
   - component: {fileID: 1676896165066674706}
   - component: {fileID: 841998413106355914}
-  - component: {fileID: 4691190964052687968}
   m_Layer: 0
   m_Name: Tree (5)
   m_TagString: Untagged
@@ -852,19 +741,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &4691190964052687968
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4621340149552151930}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5109487682392309747
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,7 +752,6 @@ GameObject:
   - component: {fileID: 7176815354851434435}
   - component: {fileID: 8523315143592483179}
   - component: {fileID: 6405871067326952979}
-  - component: {fileID: 8444139555439972640}
   m_Layer: 0
   m_Name: Tree (7)
   m_TagString: Untagged
@@ -944,19 +819,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &8444139555439972640
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5109487682392309747}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5742694408234074316
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,7 +830,6 @@ GameObject:
   - component: {fileID: 2635930277496502491}
   - component: {fileID: 8988482933163659937}
   - component: {fileID: 5607254141657491567}
-  - component: {fileID: 9112142684272731275}
   m_Layer: 0
   m_Name: Leaf
   m_TagString: Untagged
@@ -1035,13 +896,44 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &9112142684272731275
+--- !u!1 &6047999342645941735
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7138120862919636358}
+  - component: {fileID: 6597959334769329590}
+  m_Layer: 0
+  m_Name: Boundary (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7138120862919636358
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6047999342645941735}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.4, y: 1, z: 10}
+  m_LocalScale: {x: 1, y: 4, z: 20}
+  m_Children: []
+  m_Father: {fileID: 1717330538187481985}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6597959334769329590
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5742694408234074316}
+  m_GameObject: {fileID: 6047999342645941735}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -1059,7 +951,6 @@ GameObject:
   - component: {fileID: 7842501780387081314}
   - component: {fileID: 8903763847592291133}
   - component: {fileID: 5688328060250489275}
-  - component: {fileID: 7692550369387109995}
   m_Layer: 0
   m_Name: Tree (6)
   m_TagString: Untagged
@@ -1127,19 +1018,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7692550369387109995
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6365874200963002042}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6464618082226895319
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,7 +1029,6 @@ GameObject:
   - component: {fileID: 2094496669683275937}
   - component: {fileID: 6166204101080872785}
   - component: {fileID: 6184162727279666679}
-  - component: {fileID: 281995585151760302}
   m_Layer: 0
   m_Name: Leaf
   m_TagString: Untagged
@@ -1218,19 +1095,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &281995585151760302
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6464618082226895319}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7665153504206940242
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,7 +1106,6 @@ GameObject:
   - component: {fileID: 4463468103565532885}
   - component: {fileID: 1225521313663114670}
   - component: {fileID: 8335059399786906890}
-  - component: {fileID: 7846113469681089726}
   m_Layer: 0
   m_Name: Leaf
   m_TagString: Untagged
@@ -1309,19 +1172,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7846113469681089726
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7665153504206940242}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7742927643303408897
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,7 +1274,6 @@ GameObject:
   - component: {fileID: 7760827664145345061}
   - component: {fileID: 1048995157085857034}
   - component: {fileID: 7606482839636398465}
-  - component: {fileID: 462713333200620513}
   m_Layer: 0
   m_Name: Tree (3)
   m_TagString: Untagged
@@ -1492,19 +1341,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &462713333200620513
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8423362128893969305}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8598515080851632486
 GameObject:
   m_ObjectHideFlags: 0
@@ -1516,7 +1352,6 @@ GameObject:
   - component: {fileID: 5943212397963114176}
   - component: {fileID: 3041493039613809391}
   - component: {fileID: 1386224199553634497}
-  - component: {fileID: 2822739766618327740}
   m_Layer: 0
   m_Name: Tree (2)
   m_TagString: Untagged
@@ -1584,13 +1419,44 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &2822739766618327740
+--- !u!1 &8666067142743191282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5997287745208087645}
+  - component: {fileID: 4324409850151373140}
+  m_Layer: 0
+  m_Name: Boundary
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5997287745208087645
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8666067142743191282}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.4, y: 1, z: 10}
+  m_LocalScale: {x: 1, y: 4, z: 20}
+  m_Children: []
+  m_Father: {fileID: 1717330538187481985}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4324409850151373140
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8598515080851632486}
+  m_GameObject: {fileID: 8666067142743191282}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
