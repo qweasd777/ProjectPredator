@@ -10,19 +10,17 @@ public class CameraMotor : MonoBehaviour
     private Transform playerTransform;                      // player's Transform
     private Vector3 startOffset;                            // starting cam offset from player    
     private Vector3 moveVector;                             // cam positioning modifiers
-    //private CameraAspectRatioScaler camAspectRatioScaler;
 
     void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-        //camAspectRatioScaler = GetComponent<CameraAspectRatioScaler>();
 
         startOffset = transform.position - playerTransform.position;
 
         transitionTime = 0.0f;
     }
 
-    void LateUpdate()
+    void Update()
     {
         moveVector = playerTransform.position + startOffset;
 
@@ -30,9 +28,8 @@ public class CameraMotor : MonoBehaviour
         //moveVector.y = Mathf.Clamp(moveVector.y, 3, 5);         // limit Y offset (might not be needed)
 
         transform.position = moveVector;
-
+        
         // TRANSITION ANIM
-        /*
         if(transitionTime > 1.0f)
         {
             transform.position = moveVector;
@@ -45,6 +42,5 @@ public class CameraMotor : MonoBehaviour
 
             //transform.LookAt(lookAt.position + Vector3.up);         // PROBLEM1: cam wont rotate back to origin rot
         }
-        */
     }
 }

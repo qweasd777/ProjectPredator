@@ -3,9 +3,10 @@
 [RequireComponent (typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
+    public float gravity = 10f;                 // simple gravity
     public float moveSpeed_world = 7f;          // auto endless world movespeed
     public float moveSpeed_player = 7f;
-    public float gravity = 10f;                 // simple gravity
+    public float touch_speedReduction = 0.25f;
 
     public bool debug_godMode = false;
     public bool isDead { get; private set; }
@@ -49,9 +50,9 @@ public class PlayerController : MonoBehaviour
         if(Input.GetMouseButton(0))
         {
             if(Input.mousePosition.x > Screen.width * 0.5f)     // RIGHT TOUCH MOVEMENT
-                moveVector.x = moveSpeed_player;
+                moveVector.x = moveSpeed_player * touch_speedReduction;
             else                                                // LEFT TOUCH MOVEMENT
-                moveVector.x = -moveSpeed_player;              
+                moveVector.x = -moveSpeed_player * touch_speedReduction;              
         }
 
 //#endif
@@ -73,7 +74,7 @@ public class PlayerController : MonoBehaviour
 
     public void IncreaseSpeed(float increment, bool modifyAllSpeeds = true)
     {
-        if (modifyAllSpeeds)
+        if(modifyAllSpeeds)
             moveSpeed_player += increment;
 
         moveSpeed_world += increment;

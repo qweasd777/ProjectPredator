@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 
 // Responsive Camera Scaler
+[ExecuteAlways]
 public class CameraAspectRatioScaler : MonoBehaviour
 {
     public Vector2 targetAspectSize =  new Vector3(9, 16);          // set the desired aspect ratio 
     public Vector3 camZoom = Vector3.one;                           // camera zoom factor to fit different aspect ratios
 
-    void Awake()
+    void Start()
     {
         float targetAspectRatio = targetAspectSize.x / targetAspectSize.y;
         float deviceAspectRatio = (float)Screen.width / (float)Screen.height;   // determine the game window's current aspect ratio
