@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -15,15 +13,20 @@ public class MenuManager : MonoBehaviour    // Menus and UI manager
     public Text pointsUIText;               // points shown on in-game UI
     public Text finalPointsText;            // points shown on gameOverScreen
 
-    private float pointsHighScore = 0.0f;   
+    [Header("Debug UI")]
+    public bool showFPS = false;
+    public Text fpsText;
+    public float deltaTime;
 
+    private float pointsHighScore = 0.0f;
+       
     void Start()
     {
         pointsHighScore = PlayerPrefs.GetFloat("Highscore");
 
         if(SceneManager.GetActiveScene().name == "menu")
         {
-            // # ATTACHED SCRIPT CHECKS #
+            // ### ATTACHED SCRIPT CHECKS ###
             if(highScoreText == null)
                 Debug.LogWarning("MenuManager script warning... highScoreText is null!");
             else
@@ -32,13 +35,29 @@ public class MenuManager : MonoBehaviour    // Menus and UI manager
             return;
         }
 
-        // # ATTACHED SCRIPT CHECKS #
+        // ### ATTACHED SCRIPT CHECKS ###
         if(pointsUIText == null)
             Debug.LogWarning("MenuManager script warning... pointsUIText is null!");
         if(finalPointsText == null)
             Debug.LogWarning("MenuManager script warning... finalPointsText is null!");
 
         gameOverScreen.SetActive(false);
+
+        if(!showFPS)
+            fpsText.gameObject.SetActive(false);
+    }
+
+    void Update()
+    {
+        if(showFPS)
+            DisplayFPS();
+    }
+
+    void DisplayFPS()
+    {
+        deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
+        float fps = 1.0f / deltaTime;
+        fpsText.text = Mathf.Ceil(fps).ToString();
     }
 
     public void UpdatePointsUI(float points)
@@ -56,6 +75,9 @@ public class MenuManager : MonoBehaviour    // Menus and UI manager
         finalPointsText.text = ((int)points).ToString();
     }
 
+    // #####################
+    //      UI BUTTONS
+    // #####################
     public void btnRestart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CameraMotor : MonoBehaviour
 {
@@ -9,26 +7,29 @@ public class CameraMotor : MonoBehaviour
 
     private float transitionTime;
 
-    private Transform lookAt;       // player's Transform
-    private Vector3 startOffset;    // starting cam offset from player    
-    private Vector3 moveVector;     // cam positioning modifiers
+    private Transform playerTransform;                      // player's Transform
+    private Vector3 startOffset;                            // starting cam offset from player    
+    private Vector3 moveVector;                             // cam positioning modifiers
 
     void Start()
     {
-        lookAt = GameObject.FindGameObjectWithTag("Player").transform;
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
 
-        startOffset = transform.position - lookAt.position;
+        startOffset = transform.position - playerTransform.position;
 
         transitionTime = 0.0f;
     }
 
-    void LateUpdate()
+    void Update()
     {
-        moveVector = lookAt.position + startOffset;
+        moveVector = playerTransform.position + startOffset;
 
         moveVector.x = 0;
         //moveVector.y = Mathf.Clamp(moveVector.y, 3, 5);         // limit Y offset (might not be needed)
 
+        transform.position = moveVector;
+        
+        // TRANSITION ANIM
         if(transitionTime > 1.0f)
         {
             transform.position = moveVector;
