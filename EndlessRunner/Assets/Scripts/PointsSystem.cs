@@ -21,6 +21,8 @@ public class PointsSystem : MonoBehaviour       // aka GameManager
     {
         if(_instance == null)
             _instance = this;
+
+        Application.targetFrameRate = FRAMERATE;
     }
 
     public void DestroyInstance()
@@ -30,7 +32,8 @@ public class PointsSystem : MonoBehaviour       // aka GameManager
         Destroy(this);
     }
     #endregion
-    
+
+    public int FRAMERATE = 60;
     public int maxLevel = 10;
     public int pointsToNextLevel = 10;
     public float speedIncrementPerLevel = 1f;
